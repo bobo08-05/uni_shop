@@ -1,5 +1,9 @@
 <template>
 	<view>
+		<!-- 搜索模块 -->
+		<view class="search_box">
+			<ToSearch></ToSearch>
+		</view>
 		<!-- 轮播模块 -->
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
 			<swiper-item v-for="swi in swiperList" :key='swi.goods_id'>
@@ -92,6 +96,11 @@
 </script>
 
 <style lang="scss">
+	.search_box{
+		position: sticky;
+		top:0;
+		z-index: 999;
+	}
 	swiper{
 		height: 333rpx;
 		.swiper-item,image{

@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<ToSearch></ToSearch>
 		<view class="cate_wrapper">
 			<scroll-view class="cate_left" scroll-y="true" :style="{height: wh+'px'}">
 				<block v-for="(cate_l,i) in categoryList" :key='cate_l.cat_id'>
@@ -39,7 +40,7 @@
 		onLoad(){
 			// 获得窗口数据信息
 			const sys = uni.getSystemInfoSync()
-			this.wh = sys.windowHeight
+			this.wh = sys.windowHeight-50
 			// 获得分类数据
 			this.getCategoryList()
 		},
