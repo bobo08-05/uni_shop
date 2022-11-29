@@ -1,4 +1,11 @@
 {
+	"easycom": {
+	// 下载安装的方式需要前面的"@/"，npm安装的方式无需"@/"
+	// 下载安装方式
+	"^u-(.)": "@/uview-ui/components/u-$1/u-$1.vue"
+	// npm安装方式
+	// "^u-(.)": "uview-ui/components/u-$1/u-$1.vue"
+	},
 	"pages": [{
             "path" : "pages/home/home",
             "style" : {}
@@ -25,7 +32,11 @@
                 }
                 ,{
                     "path" : "goods_list/goods_list",
-                    "style" : {}
+                    "style" : {
+						"onReachBottomDistance":150,
+						"enablePullDownRefresh":true,
+						"backgroundColor":"#F8F8F8"
+					}
                 }
                 ,{
                     "path" : "Search/Search",
