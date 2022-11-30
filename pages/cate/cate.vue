@@ -27,7 +27,9 @@
 </template>
 
 <script>
+	import badgeMin from '@/mixins/tabbar_badge.js'
 	export default {
+		mixins:[badgeMin],
 		data() {
 			return {
 				wh:0,
