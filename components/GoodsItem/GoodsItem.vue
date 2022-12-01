@@ -5,7 +5,7 @@
 				<radio :checked="item.goods_state" color="#C00000" v-if="showRadio" @click="ridioClickHandler"></radio>
 				<image :src="item.goods_small_logo || defaultPic" class="goods_pic"></image>
 			</view>
-			<view class="goods_item_right">
+			<view class="goods_item_right" >
 				<view class="goods_name">
 					{{item.goods_name}}
 				</view>

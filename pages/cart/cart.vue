@@ -9,8 +9,8 @@
 		</view>
 				
 		<uni-swipe-action>
-			<view v-for="(cart,i) in cart" :key='i' @click='goGoodsDetail(cart)'>
-			<uni-swipe-action-item :options="options" @click="deleteGoods(cart)">
+			<view v-for="(cart,i) in cart" :key='i'>
+			<uni-swipe-action-item :options="options">
 				<GoodsItem :item='cart' :showRadio="true" @radioChange="radioChangeHandler" :showNumBox="true" @numChange="numChangeHandler"></GoodsItem>
 			</uni-swipe-action-item>
 			</view>
@@ -65,11 +65,11 @@
 			deleteGoods(cart){
 				this.removeGoods(cart)
 			},
-			goGoodsDetail(cart){
-				uni.navigateTo({
-					url:'/subpackage/goods_detail/goods_detail?goods_id='+cart.goods_id
-				})
-			}
+			// goGoodsDetail(cart){
+			// 	uni.navigateTo({
+			// 		url:'/subpackage/goods_detail/goods_detail?goods_id='+cart.goods_id
+			// 	})
+			// }
 		}
 	}
 </script>
